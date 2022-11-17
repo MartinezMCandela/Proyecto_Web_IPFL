@@ -1,0 +1,60 @@
+create table usuario (id_usuario varchar(50)primary key,nombre_usuario varchar(50),
+					 contrasena integer,direccion varchar(50));
+insert into usuario 
+values ('D.Car','Diego Carmona','152876','Av.Siempre Viva 1421');
+insert into usuario 
+values ('Rojas.M','Mariana Rojas','895740','Urquiza 145');
+insert into usuario 
+values ('Mart.Cand','Candela Martinez','390034','Caseros 600');
+insert into usuario 
+values ('B.Villarreal','Belen Villareal','517220','Belgrano 406');
+insert into usuario 
+values ('Lu.Perc','Lucas Percuoco','953807','Zapiola 573');
+insert into usuario 
+values ('SayNoMore','Carlos Garcia','137669','avLibertador 563');
+create table producto (id_producto varchar(50) primary key,descripcion varchar(50),
+					  proveedor varchar(50));
+insert into producto
+values ('Pizza Margarita','muzzarella_tomate_aceituna','Dominos');
+insert into producto
+values ('Pizza Especial','muzzarella_jamon_morones','Dominos');
+insert into producto
+values ('Pizza 4 Quesos','muzzarella_roquefort_provolone','Dominos');
+insert into producto
+values ('Hamburguesa Simple','carne_cheddar_cebolla','PumperNic');
+insert into producto
+values ('Hamburguesa doble','carne_huevo_bacon','PumperNic');
+insert into producto
+values ('Cerveza Ipa','artesanal_amarga','Corona');
+insert into producto
+values ('Cerveza Negra','Doble_malta','Corona');
+create table factura (id_factura varchar(50) primary key,monto int,tipo_pago varchar(50));
+insert into factura
+values ('F001','4000','efectivo');
+insert into factura
+values ('F002','6000','debito');
+insert into factura
+values ('F003','8000','mercadopago');
+insert into factura
+values ('F004','3000','efectivo');
+insert into factura
+values ('F005','7000','debito');
+insert into factura
+values ('F006','3000','mercadopago');
+create table pedido(producto varchar(50),
+					usuario varchar(50),
+					cantidad int,
+					id_factura varchar(50),
+					monto int primary key);
+
+alter table pedido add foreign key (usuario) references usuario(id_usuario);
+alter table pedido add foreign key (id_factura) references factura(id_factura);
+alter table pedido  add foreign key (producto) references producto (id_producto);
+insert into pedido values ('Pizza Margarita','D.Car','2','F001','4000');
+insert into pedido values ('Pizza Especial','Rojas.M','4','F002','6000');
+insert into pedido values ('Pizza 4 Quesos','Mart.Cand','6','F003','8000');
+insert into pedido values ('Hamburguesa Simple','B.Villarreal','2','F004','3000');
+insert into pedido values ('Hamburguesa doble','Lu.Perc','3','F005','7000');
+insert into pedido values ('Cerveza Ipa','SayNoMore','1','F006','1500');
+alter table factura add foreign key (monto) references pedido(monto); 	
+	
