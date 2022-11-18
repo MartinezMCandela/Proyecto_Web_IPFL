@@ -1,0 +1,18 @@
+select usuario,cantidad,monto from pedido;
+
+
+select pedido.producto,pedido.monto,factura.tipo_pago from pedido
+inner join factura on pedido.id_factura=factura.id_factura;
+
+select pedido.cantidad,pedido.monto,producto.descripcion from pedido
+inner join producto on pedido.producto=producto.id_producto;
+
+select * from factura where factura.tipo_pago= 'efectivo';
+
+
+select usuario.nombre_usuario,pedido.usuario from usuario 
+inner join pedido on usuario.id_usuario=pedido.usuario;
+
+select monto from factura where factura.monto >500;
+
+update factura set tipo_pago='debito';
