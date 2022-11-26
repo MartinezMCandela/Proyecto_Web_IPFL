@@ -1,0 +1,72 @@
+@keyframes move {
+    from{background: transparent;transform: translateX(0);}
+     to{background:transparent;transform: translateX(300px)}}
+
+
+h1{
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 300%;
+    text-shadow: 3px  0px 0px rgba(255, 77, 6, 0.904),
+    0px  3px 0px rgba(255, 77, 6, 0.904),
+   -3px  0px 0px rgba(255, 77, 6, 0.904),
+    0px -3px 0px rgba(255, 77, 6, 0.904);
+    height: 75px;
+    animation: move 5s;
+    animation-direction: reverse;
+    
+}
+.subtitulo{
+    color: white;
+    font-style: italic;
+    text-align: center;
+    height: 120px;
+    font-size:25px;
+    text-shadow: 1px  0px 0px rgb(255, 209, 6),
+    0px  1px 0px rgb(255, 209, 6),
+   -1px  0px 0px rgb(255, 209, 6),
+    0px -1px 0px rgb(255, 209, 6);
+   
+   
+    
+}
+  
+body{
+    background-image:url("https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80") ;
+    background-color: black;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+    
+    
+
+    button{
+    border: 0;
+    background: #ffc400ec;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #ffc400ec;
+    padding: 14px 35px;
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+    font-size: 20px;
+     text-shadow: 
+     1px  0px 0px black,
+     0px  1px 0px black,
+    -1px  0px 0px black,
+     0px -1px 0px black;
+     box-shadow: 0 4px 8px 0 rgba(255, 77, 6, 0.904),0 6px 20px 0 rgba(255, 77, 6, 0.904);
+    }
+
+    button:hover{
+        background: none;
+    }
