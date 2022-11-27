@@ -1,0 +1,66 @@
+@keyframes move {
+    from{background: transparent;transform: translateX(0);}
+     to{background:transparent;transform: translateX(700px)}}
+     
+h1{
+font-size: 250%;  
+}     
+     
+body {
+justify-content: center;
+background-color: #ee00ee;
+font-family:'Raleway';
+text-align: center;
+text-transform: uppercase;
+color: #ffffff;
+letter-spacing: 2px;
+padding: 70px;
+}
+
+.subtitulo{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Raleway';
+    height: 100px;
+    font-weight: 700;
+    font-size:20px;
+    text-transform: uppercase;
+    animation: move 0.5s;
+    animation-direction:reverse;
+}
+
+#InfoCompra {
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height : 20px;
+}
+
+button{
+    color: white;
+    padding: 1.5%;
+    border:#ffffff;
+    border: solid;
+    outline:transparent;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-transform: uppercase;
+    background-color: #ee00ee;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+       
+      }
+  
+      button:hover{
+          background:#ee00ee;
+          cursor:pointer;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          
+      }
+
